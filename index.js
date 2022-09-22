@@ -80,15 +80,23 @@ d)  Todos los ingredientes de cada pizza (En cada iteración imprimir los
     recorridos, ya que cada pizza del array de pizzas tiene un array de 
     ingredientes:`);
 
-/* 
-for(i = 0; i < pizzas.length; i++){
-    console.log(`Tenemos pizzas de ${pizzas[i].nombre} y sus ingredientes son: ${pizzas[i].ingredientes}`)
-};
- */
 
+/* for(i = 0; i < pizzas.length; i++){
+    console.log(`Tenemos pizzas de ${pizzas[i].nombre} y sus ingredientes son: ${pizzas[i].ingredientes}`)
+}; */
+
+/* 
 const IngredientesPizza = pizzas.filter(
    (pizza) => pizza.nombre && pizza.ingredientes
 )
 IngredientesPizza.forEach((pizza) => {
    console.log(`Las pizzas de ${pizza.nombre} tienen: ${pizza.ingredientes}`)
+}); */
+
+
+pizzas.forEach((p) => {
+    console.log(`La pizza de ${p.nombre} tiene los siguientes ingredientes:`);
+    p.ingredientes.forEach((ingredientesLista) => {
+        console.log(`- ${ingredientesLista}`);
+    })
 });
